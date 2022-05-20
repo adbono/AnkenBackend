@@ -1,0 +1,24 @@
+# config context path to "/" by setting an empty string
+server:
+  contextPath:
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/anken?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
+    username: webapp
+    password: webapp
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+jwt:
+  header: Authorization
+  secret: tasksSecret
+  expiration: 604800
+      
+
+#logging:
+#  level:
+#    org.springframework:
+#      security: DEBUG
